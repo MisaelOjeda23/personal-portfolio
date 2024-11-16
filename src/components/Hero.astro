@@ -1,0 +1,91 @@
+---
+import Container from "./Container.astro";
+---
+
+<div class="relative" id="home">
+    <div
+        aria-hidden="true"
+        class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20"
+    >
+    <div
+        class="blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400"
+    >
+    </div>
+    <div
+        class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300"
+    >
+    </div>
+</div>
+<Container>
+    <div class="relative pt-36 ml-auto">
+        <div class="lg:w-2/3 text-center mx-auto">
+            <h1
+            class="text-gray-900 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl"
+            >
+            Soy Misael Ojeda <span class="text-primary"
+                >Desarrollador web</span
+            >
+            </h1>
+            <p class="mt-8 text-gray-700 dark:text-gray-300 text-sm md:text-base">
+                Soy un desarrollador web con más de un año de experiencia, 
+                especializado en la creación de aplicaciones modernas y escalables. 
+                Domino tecnologías como React, React Native, Node.js, y estoy capacitado para desarrollar API REST utilizando Node.js/Express y .NET.
+            </p>
+            <div class="mt-16 flex flex-wrap justify-center gap-y-4 gap-x-6">
+                <a
+                    href="#"
+                    class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
+                >
+                    <span class="relative text-base font-semibold text-white"
+                        >Explorar más</span
+                    >
+                </a>
+                <a
+                    href="#"
+                    class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:bg-primary/10 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95  sm:w-max"
+                > 
+                <span
+                    class="relative text-base font-semibold text-primary"
+                    >Contáctame</span
+                    >
+                </a>
+            </div>
+            
+        </div>
+        <div class="py-8 group mt-16 border-y border-gray-100 items-center gap-1 sm:gap-2 dark:border-gray-800 flex justify-center">
+            <h1 class="text-zinc-400 transition group-hover:text-primary text-2xl md:text-4xl font-semibold">Experiencia en desarrollo con</h1>
+            <svg  
+                width="24"  
+                height="24"  
+                viewBox="0 0 24 24"  
+                fill="none"  
+                stroke="currentColor"  
+                stroke-width="2"  
+                stroke-linecap="round"  
+                stroke-linejoin="round"  
+                class="text-primary -translate-y-3 opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100 icon icon-tabler icons-tabler-outline icon-tabler-arrow-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M18 13l-6 6" /><path d="M6 13l6 6" />
+            </svg>
+        </div>
+        <div class="mt-12 grid grid-cols-2 items-center md:grid-cols-3 lg:grid-cols-6">
+            <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
+                <img src="/img/react-logo.png" class="h-28 hover:animate-spin-slow object-cover w-auto mx-auto" loading="lazy" alt="react logo" width="" height="" />
+            </div>
+            <div class="p-4 flex grayscale transition duration-200 hover:grayscale-0">
+                <img src="/img/react-native-logo.png" class="h-20 hover:animate-pulse object-cover w-auto m-auto" loading="lazy" alt="native logo" width="" height="" />
+            </div>
+            <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
+                <img src="/img/astro-logo.png" class="h-16 object-cover w-auto mx-auto" loading="lazy" alt="astro logo" width="" height="" />
+            </div>
+            <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
+                <img src="/img/.net.png" class="h-16 object-cover w-auto mx-auto" loading="lazy" alt=".net logo" width="" height="" />
+            </div>
+            <div class="p-4 flex grayscale transition duration-200 hover:grayscale-0">
+                <img src="/img/typescript.png" class="h-16 object-cover w-auto m-auto" loading="lazy" alt="typescript logo" width="" height="" />
+            </div>
+            <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
+                <img src="/img/node-express.png" class="h-24 object-cover w-auto mx-auto" loading="lazy" alt="node/express logo" width="" height="" />
+            </div>
+        </div>
+    </div>
+</Container>
+</div>

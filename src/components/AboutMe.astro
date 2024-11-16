@@ -1,0 +1,54 @@
+---
+import Container from "./Container.astro";
+
+---
+
+<div id="about" class="my-36">
+    <Container>
+      <div class="flex gap-1">
+        <svg  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="text-sky-500 icon icon-tabler icons-tabler-filled icon-tabler-user"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 2a5 5 0 1 1 -5 5l.005 -.217a5 5 0 0 1 4.995 -4.783z" /><path d="M14 14a5 5 0 0 1 5 5v1a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-1a5 5 0 0 1 5 -5h4z" /></svg>
+        <p class="text-sky-500">Sobre mi</p>
+      </div>
+      <div class="space-y-6 justify-between text-gray-600 flex-col flex lg:flex-row md:gap-6 md:space-y-0 lg:gap-12 lg:items-center">
+        <div class="grid place-items-center lg:w-1/2 overflow-hidden">
+          <img
+            src="/img/Perfil.jpg"
+            alt="image"
+            loading="lazy"
+            class=" w-4/5 border-4 dark:border-violet-500 border-violet-400 rounded-full lg:w-full"
+          />
+        </div>
+        <div class="md:7/12 lg:w-1/2">
+          <h2 class="text-3xl font-bold text-gray-900 md:text-4xl dark:text-white">
+            Ing. Misael Ojeda
+          </h2>
+          <p class="my-8 text-gray-600 dark:text-gray-300">   
+            <span class="font-bold text-primary">¡Hola! Soy Misael Ojeda</span> <br>
+            Soy Ingeniero en Desarrollo y Gestión de Software con una pasión innata por la programación. Desde el momento en que escribí mis primeras líneas de código, supe que este sería mi camino.
+            <br><br>Mi interés creció aún más al descubrir el desarrollo web, un área que me cautivó completamente y en la que me esfuerzo por mejorar constantemente. Cada día representa una nueva oportunidad para aprender y perfeccionar mis habilidades en esta apasionante profesión.
+            <br><br>Estoy preparado y entusiasmado por colaborar en proyectos que representen desafíos y que contribuyan a seguir construyendo soluciones innovadoras.
+          </p>
+          <div class="divide-y space-y-4 divide-gray-100 dark:divide-gray-800">
+            <div class="mt-8 flex gap-4 md:items-center">
+              <div class="w-12 h-12 flex gap-4 rounded-full bg-indigo-100 dark:bg-indigo-900/20">      
+                <svg width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="w-6 h-6 m-auto text-indigo-500 dark:text-indigo-400 icon icon-tabler icons-tabler-outline icon-tabler-ux-circle"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M7 10v2a2 2 0 1 0 4 0v-2" /><path d="M14 10l3 4" /><path d="M14 14l3 -4" /></svg>
+              </div>
+              <div class="w-5/6">
+                <h3 class="font-semibold text-lg text-gray-700 dark:text-indigo-300">Desarrollo Front End</h3>
+                <p class="text-gray-500 dark:text-gray-400">Experiencia UX/UI.</p>
+              </div> 
+            </div> 
+            <div class="pt-4 flex gap-4 md:items-center">
+              <div class="w-12 h-12 flex gap-4 rounded-full bg-teal-100 dark:bg-teal-900/20">  
+                <svg width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="w-6 h-6 m-auto text-teal-600 dark:text-teal-400 icon icon-tabler icons-tabler-outline icon-tabler-brand-codesandbox"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M20 7.5v9l-4 2.25l-4 2.25l-4 -2.25l-4 -2.25v-9l4 -2.25l4 -2.25l4 2.25z" /><path d="M12 12l4 -2.25l4 -2.25" /><path d="M12 12l0 9" /><path d="M12 12l-4 -2.25l-4 -2.25" /><path d="M20 12l-4 2v4.75" /><path d="M4 12l4 2l0 4.75" /><path d="M8 5.25l4 2.25l4 -2.25" /></svg>                                   
+              </div>
+              <div class="w-5/6">
+                <h3 class="font-semibold text-lg text-gray-700 dark:text-teal-300">Desarrollo Back End</h3>
+                <p class="text-gray-500 dark:text-gray-400">Experiencia con Express.js y .Net.</p>
+              </div> 
+            </div> 
+          </div>
+        </div>
+      </div>
+    </Container>
+</div>
