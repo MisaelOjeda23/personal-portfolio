@@ -2,26 +2,87 @@
 import Container from "./Container.astro";
 ---
 
+<script>
+  const themeButton = document.querySelector("#themeButton");
+
+  const toggleTheme = () => {
+    const html = document.documentElement;
+    const currentTheme = html.classList.contains("dark") ? "dark" : "light";
+
+    const newTheme = currentTheme === "dark" ? "light" : "dark";
+    html.classList.remove(currentTheme);
+    html.classList.add(newTheme);
+
+    localStorage.setItem("theme", newTheme);
+
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme) {
+      document.documentElement.classList.add(savedTheme);
+    } else {
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+      document.documentElement.classList.add(prefersDark ? "dark" : "light");
+    }
+  };
+
+  themeButton?.addEventListener("click", toggleTheme);
+</script>
+
 <header>
   <div class="relative m-5">
     <Container>
       <div class="flex justify-between items-center">
         <div class="flex flex-row items-center gap-2 w-1/2 lg:w-2/3">
-            <span class="text-2xl bg-gradient-to-r font-bold from-primary to-violet-800 bg-clip-text text-transparent">
-                MishaDev
-            </span>
+          <span
+            class="text-2xl bg-gradient-to-r font-bold from-primary to-violet-800 bg-clip-text text-transparent"
+          >
+            MishaDev
+          </span>
         </div>
-        <nav class="flex-row w-1/2 lg:w-1/3">
-          <ul class="hidden sm:flex justify-between">
-            <li class="">
-                <a href="#projects" class="hover:text-secondary text-gray-600 transition">Mis proyectos</a>
+        <nav class="flex-wrap w-1/2 lg:w-1/3">
+          <ul class="flex items-center justify-end md:justify-between">
+            <li class="hidden md:flex">
+              <a
+                href="#projects"
+                class="hover:text-secondary text-gray-600 dark:text-gray-500 dark:hover:text-secondary transition"
+                >Mis proyectos</a
+              >
             </li>
-            <li>
-                <a href="#about" class="hover:text-secondary text-gray-600 transition">Sobre mi</a>
+            <li class="hidden md:flex">
+              <a
+                href="#about"
+                class="hover:text-secondary text-gray-600 dark:text-gray-500 dark:hover:text-secondary transition"
+                >Sobre mi</a
+              >
             </li>
-            <li>
-                <a href="#social-media" class="hover:text-secondary text-gray-600 transition">Contacto</a>
+            <li class="hidden md:flex">
+              <a
+                href="#social-media"
+                class="hover:text-secondary text-gray-600 dark:text-gray-500 dark:hover:text-secondary transition"
+                >Contacto</a
+              >
             </li>
+            <button id="themeButton" class="bg-primary/10 p-1 rounded-lg">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler text-primary icons-tabler-outline icon-tabler-brightness-down"
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                  d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path><path
+                  d="M12 5l0 .01"></path><path d="M17 7l0 .01"></path><path
+                  d="M19 12l0 .01"></path><path d="M17 17l0 .01"></path><path
+                  d="M12 19l0 .01"></path><path d="M7 17l0 .01"></path><path
+                  d="M5 12l0 .01"></path><path d="M7 7l0 .01"></path></svg
+              >
+            </button>
           </ul>
         </nav>
       </div>
@@ -29,8 +90,4 @@ import Container from "./Container.astro";
   </div>
 </header>
 
-
-<style>
-
-
-</style>
+<style></style>
